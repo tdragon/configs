@@ -1,0 +1,38 @@
+alias ls='ls --color=auto'
+alias dir='dir --color=auto'
+alias vdir='vdir --color=auto'
+alias grep='grep --color=auto --exclude-dir=.svn'
+alias fgrep='fgrep --color=auto --exclude-dir=.svn'
+alias egrep='egrep --color=auto --exclude-dir=.svn'
+alias pgrep='grep -P'
+alias ll='ls -l'
+alias la='ls -A'
+alias lla='ls -Al'
+alias l='ls -CF'
+alias quote="sed 's/^/\"/;s/$/\"/'"
+alias qoute='quote'
+alias aout="./a.out"
+alias md="mkdir -p"
+alias less='less -R'
+mdd() { mkdir -p "$1" && cd "$1"; }
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+svn-diff() { svn diff "$@" | colordiff; }
+alias tm='tortoisemerge'
+
+#misprints
+alias mna='man'
+alias nore='more'
+alias act='cat'
+alias gist='history | grep'
+alias amn='man'
+alias maek='make'
+alias male='make'
+alias cdw='cd /cygdrive/c/Work'
+
+# 4 cygwin only
+start() { cmd /c start `[[ -n "$1" ]] && cygpath -w "$1"`; }
+
+
