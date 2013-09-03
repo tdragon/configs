@@ -2,7 +2,7 @@
 
 function publish(){
     base=`basename $name`
-    if [ $base != "publish.sh" ] && [ $base!=*~ ];  then
+    if [[ !("$base" =~ (.*~)) ]] && [ $base != "publish.sh" ];  then
        cp -vb $name ~/.$base 
     fi
 
