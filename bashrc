@@ -86,11 +86,11 @@ fi
 ulimit -c unlimited
 
 
-export PERL_LOCAL_LIB_ROOT="/home/tikhdm/perl5";
-export PERL_MB_OPT="--install_base /home/tikhdm/perl5";
-export PERL_MM_OPT="INSTALL_BASE=/home/tikhdm/perl5";
-export PERL5LIB="/home/tikhdm/perl5/lib/perl5/cygwin-thread-multi-64int:/home/tikhdm/perl5/lib/perl5";
-export PATH="/home/tikhdm/perl5/bin:$PATH";
+export PERL_LOCAL_LIB_ROOT="$HOME/perl5";
+export PERL_MB_OPT="--install_base $HOME/perl5";
+export PERL_MM_OPT="INSTALL_BASE=$HOME/perl5";
+export PERL5LIB="$HOME/perl5/lib/perl5/cygwin-thread-multi-64int:$HOME/perl5/lib/perl5";
+export PATH="$HOME/perl5/bin:$PATH";
 
 export TERM='xterm-256color'
 
