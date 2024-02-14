@@ -24,6 +24,7 @@ cask "google-chrome"
 cask "Ukelele"
 cask "gimp"
 cask "dynalist"
+cask "Spotify"
 
 brew "asdf"
 brew "aws/tap/aws-sam-cli"
