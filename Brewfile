@@ -25,6 +25,7 @@ cask "Ukelele"
 cask "gimp"
 cask "dynalist"
 cask "Spotify"
+cask "obsidian"
 
 brew "asdf"
 brew "aws/tap/aws-sam-cli"
