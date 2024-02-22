@@ -11,6 +11,7 @@ mas "Dropover", id: 1355679052
 mas "Hand Mirror", id: 1502839586
 
 cask "1Password"
+cask "1password-cli"
 cask "docker"
 cask "iterm2"
 cask "kitty"
