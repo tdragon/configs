@@ -4,3 +4,10 @@ alias ls=eza
 alias top=btm
 alias .=source
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+
+function aws_login(){
+  aws sso login --profile $1
+  eval "$(aws configure export-credentials --profile $1 --format env)"
+}
+

@@ -64,3 +64,6 @@ export NVM_DIR="$HOME/.nvm"
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 [[ -s "$HOME/.config/broot/launcher/bash/br" ]]  && source "$HOME/.config/broot/launcher/bash/br"
+
+# Created by `pipx` on 2024-02-22 09:39:06
+export PATH="$PATH:/Users/tikhdm/.local/bin"
