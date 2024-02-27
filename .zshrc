@@ -67,3 +67,6 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Created by `pipx` on 2024-02-22 09:39:06
 export PATH="$PATH:/Users/tikhdm/.local/bin"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
