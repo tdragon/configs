@@ -24,7 +24,7 @@ export BAT_THEME="TwoDark"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo copypath z zsh-syntax-highlighting web-search)
+plugins=(git copypath z zsh-syntax-highlighting web-search zsh-vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
