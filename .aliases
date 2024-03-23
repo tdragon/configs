@@ -7,7 +7,13 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 
 function aws_login(){
-  aws sso login --profile $1
+  SSO_ACCOUNT=$(aws sts get-caller-identity --query "Account" --profile $1)
+  if [ ${#SSO_ACCOUNT} -ne 14 ];  then
+    aws sso login --profile $1
+    aws configure set dev.s3.max_concurrent_requests 100
+  else
+    echo "Session is still valid" $(aws configure export-credentials|jq .Expiration)
+  fi
   eval "$(aws configure export-credentials --profile $1 --format env)"
 }
 
