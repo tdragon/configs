@@ -28,6 +28,7 @@ cask "dynalist"
 cask "Spotify"
 cask "obsidian"
 cask "brave-browser"
+cask raycast
 
 brew "asdf"
 brew "aws/tap/aws-sam-cli"
@@ -55,4 +56,6 @@ brew "zsh-autosuggestions"
 brew "pipx"
 brew "font-iosevka-term-nerd-font"
 brew "chatbox"
-
+brew "zoxide"
+brew "fzf"
+brew "rg"

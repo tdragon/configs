@@ -15,7 +15,7 @@ config.hide_tab_bar_if_only_one_tab = true
 config.use_fancy_tab_bar = false
 
 --- Fix Alt keys for FI layout
-config.send_composed_key_when_left_alt_is_pressed = true
+--config.send_composed_key_when_left_alt_is_pressed = true
 config.send_composed_key_when_right_alt_is_pressed = true
 
 -- https://wezfurlong.org/wezterm/config/lua/gui-events/gui-startup.html

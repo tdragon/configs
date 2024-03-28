@@ -24,7 +24,7 @@ export BAT_THEME="TwoDark"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git copypath z zsh-syntax-highlighting web-search zsh-vi-mode)
+plugins=(git copypath zsh-syntax-highlighting web-search zsh-vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -69,4 +69,6 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 export PATH="$PATH:/Users/tikhdm/.local/bin"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+eval "$(zoxide init --cmd cd zsh)"
 
