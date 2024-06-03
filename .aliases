@@ -8,11 +8,14 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 function aws_login(){
   SSO_ACCOUNT=$(aws sts get-caller-identity --query "Account" --profile $1)
-  if [ ${#SSO_ACCOUNT} -ne 14 ];  then
+  EXPIRATION=$(aws configure export-credentials --profile $1|jq -r .Expiration)
+  NOW=$(date -u -Iseconds)
+
+  if [ $(expr x"$NOW" \> x"$EXPIRATION") = 1 ];  then
     aws sso login --profile $1
     aws configure set dev.s3.max_concurrent_requests 100
   else
-    echo "Session is still valid" $(aws configure export-credentials|jq .Expiration)
+    echo "Session is still valid" $EXPIRATION
   fi
   eval "$(aws configure export-credentials --profile $1 --format env)"
 }
