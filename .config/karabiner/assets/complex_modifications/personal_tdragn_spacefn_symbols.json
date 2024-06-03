@@ -297,7 +297,9 @@
           "to": [
             {
               "key_code": "hyphen",
-              "modifiers": []
+              "modifiers": [
+                "left_shift"
+              ]
             }
           ],
           "conditions": [
