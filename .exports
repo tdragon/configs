@@ -16,7 +16,7 @@ export MANPAGER='less -X';
 # Move python cache out of project folder
 export PYTHONPYCACHEPREFIX="$HOME/.cache/Python"
 
-export PATH="~/Library/Android/sdk/platform-tools/":$PATH
+export PATH="$HOME/Library/Android/sdk/platform-tools/":$PATH
 
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
