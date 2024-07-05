@@ -24,7 +24,7 @@ export BAT_THEME="TwoDark"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git copypath zsh-syntax-highlighting web-search zsh-vi-mode)
+plugins=(git copypath zsh-syntax-highlighting web-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -72,3 +72,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 eval "$(zoxide init --cmd cd zsh)"
 
+# Based on this stack overflow answer of how to remove an element from an array
+# https://stackoverflow.com/a/25172688/154703
+ZSH_AUTOSUGGEST_ACCEPT_WIDGETS[$ZSH_AUTOSUGGEST_ACCEPT_WIDGETS[(i)vi-forward-char]]=()
+ZSH_AUTOSUGGEST_ACCEPT_WIDGETS[$ZSH_AUTOSUGGEST_ACCEPT_WIDGETS[(i)forward-char]]=()
