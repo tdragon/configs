@@ -7,7 +7,7 @@ local config = wezterm.config_builder()
 -- For example, changing the color scheme:
 config.color_scheme = "Catppuccin Mocha"
 -- config.window_background_opacity = 0.90
-config.window_background_image = wezterm.home_dir .. "/terminal-background.png"
+-- config.window_background_image = wezterm.home_dir .. "/terminal-background.png"
 
 config.font = wezterm.font_with_fallback({
 	{ family = "Iosevka Term", weight = "Medium" },

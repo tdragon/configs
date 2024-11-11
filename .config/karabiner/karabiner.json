@@ -18,6 +18,47 @@
                 },
                 "rules": [
                     {
+                        "description": "LShift -> en, RShift -> ru",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "left_shift"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_shift"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "select_input_source": {
+                                            "language": "en"
+                                        }
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "right_shift"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_shift"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "select_input_source": {
+                                            "language": "ru"
+                                        }
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "SpaceFN: Space enables SpaceFN mode (see: https://geekhack.org/index.php?topic=51069.0 & https://spacelauncherapp.com)",
                         "manipulators": [
                             {
@@ -4050,8 +4091,8 @@
                         "product_id": 5,
                         "vendor_id": 65534
                     },
-                    "ignore": true,
-                    "manipulate_caps_lock_led": true,
+                    "ignore": false,
+                    "manipulate_caps_lock_led": false,
                     "mouse_flip_horizontal_wheel": false,
                     "mouse_flip_vertical_wheel": false,
                     "mouse_flip_x": false,

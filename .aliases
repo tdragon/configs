@@ -4,7 +4,7 @@ alias ls=eza
 alias top=btm
 alias .=source
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-
+alias beep='afplay /System/Library/Sounds/Funk.aiff'
 
 function aws_login(){
   SSO_ACCOUNT=$(aws sts get-caller-identity --query "Account" --profile $1)
@@ -13,7 +13,8 @@ function aws_login(){
 
   if [ $(expr x"$NOW" \> x"$EXPIRATION") = 1 ];  then
     aws sso login --profile $1
-    aws configure set dev.s3.max_concurrent_requests 100
+    aws configure set $1.s3.max_concurrent_requests 1000
+    aws configure set $1.s3.max_queue_size 100000
   else
     echo "Session is still valid" $EXPIRATION
   fi
