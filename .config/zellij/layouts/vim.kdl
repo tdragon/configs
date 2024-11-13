@@ -1,0 +1,12 @@
+layout {
+  pane {
+    command "vim"
+    args "."
+    cwd "~/sources"
+    size "80%"
+  }
+  pane {
+    cwd "~/sources"
+  }
+}
+
