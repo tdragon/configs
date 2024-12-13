@@ -180,6 +180,7 @@ keybinds {
     shared_except "locked" {
         bind "Alt u" { SwitchToMode "Locked"; }
 
+        unbind "Ctrl q"
         bind "Alt q" { Quit; }
         bind "Alt n" { NewPane "Right" ; }
         bind "Alt d" { NewPane "Down" ; }
@@ -195,6 +196,7 @@ keybinds {
 
     shared_except "normal" "locked" {
         unbind "Ctrl g"
+        unbind "Ctrl q"
         bind "Enter" "Esc" "Alt u" { SwitchToMode "Normal"; }
     }
 

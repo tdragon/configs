@@ -5,6 +5,7 @@ alias top=btm
 alias .=source
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias beep='afplay /System/Library/Sounds/Funk.aiff'
+alias git_clean='git branch --merged | grep -Ev "(^\*|^\+|master|main|dev)" | xargs --no-run-if-empty git branch -D'
 
 function aws_login(){
   SSO_ACCOUNT=$(aws sts get-caller-identity --query "Account" --profile $1)
@@ -19,5 +20,6 @@ function aws_login(){
     echo "Session is still valid" $EXPIRATION
   fi
   eval "$(aws configure export-credentials --profile $1 --format env)"
+  export AWS_PROFILE=$1
 }
 
