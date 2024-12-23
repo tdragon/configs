@@ -1,0 +1,8 @@
+auto-commits: false
+analytics-disable: true
+input-history-file: .aider/input.history
+chat-history-file: .aider/chat.history.md
+# llm-history-file: .aider/llm-hostory
+code-theme: solarized-dark
+vim: true
+editor: vim
