@@ -18,8 +18,4 @@ export PYTHONPYCACHEPREFIX="$HOME/.cache/Python"
 
 export PATH="$HOME/Library/Android/sdk/platform-tools/":$PATH
 
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
 export ANDROID_HOME="$HOME/Library/Android/sdk"

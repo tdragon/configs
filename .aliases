@@ -23,3 +23,4 @@ function aws_login(){
   export AWS_PROFILE=$1
 }
 
+alias aider4o='mkdir -p ./.aider && aider --4o --openai-api-key `op read op://private/openai/credential`'

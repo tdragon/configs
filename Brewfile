@@ -30,7 +30,7 @@ cask "obsidian"
 cask "brave-browser"
 cask raycast
 
-brew "asdf"
+brew "mise"
 brew "aws/tap/aws-sam-cli"
 brew "ctop"
 brew "bottom"
