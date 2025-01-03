@@ -59,7 +59,7 @@ resurrect.periodic_save()
 resurrect.set_encryption({
 	enable = true,
 	method = "/opt/homebrew/bin/age",
-	private_key = wezterm.home_dir .. "/wezterm-key.txt",
+	private_key = wezterm.home_dir .. "/.age/wezterm-key.txt",
 	public_key = "age197epwatfx8pd96nhfpvesjwqkhvvuqhwytv9y6cf30h2xmuydvmsnse602",
 })
 
@@ -149,6 +149,15 @@ smart_splits.apply_to_config(config, {
 	},
 })
 local bar = wezterm.plugin.require("https://github.com/adriankarlen/bar.wezterm")
-bar.apply_to_config(config)
+bar.apply_to_config(config, {
+	modules = {
+		username = {
+			enabled = false,
+		},
+		hostname = {
+			enabled = false,
+		},
+	},
+})
 
 return config
