@@ -1,7 +1,8 @@
 alias vim=nvim
-alias cat=bat
+alias cat=moar
 alias ls=eza
 alias top=btm
+alias y=yazi
 alias .=source
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias beep='afplay /System/Library/Sounds/Funk.aiff'
