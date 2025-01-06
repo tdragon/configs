@@ -2,7 +2,6 @@ alias vim=nvim
 alias cat=moar
 alias ls=eza
 alias top=btm
-alias y=yazi
 alias .=source
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias beep='afplay /System/Library/Sounds/Funk.aiff'
@@ -25,3 +24,12 @@ function aws_login(){
 }
 
 alias aider4o='mkdir -p ./.aider && aider --4o --openai-api-key `op read op://private/openai/credential`'
+
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
