@@ -8,8 +8,9 @@ if status is-interactive
     alias vim="nvim"
     alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 
-    set -x MOAR "--no-linenumbers"
+    set -x MOAR "--no-linenumbers --style=tokyonight-storm"
     set -x PAGER "moar"
+    fish_add_path ~/Library/Android/sdk/platform-tools/
 end
 
 function y
