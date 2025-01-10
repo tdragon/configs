@@ -7,6 +7,8 @@ if status is-interactive
     alias top="btm"
     alias vim="nvim"
     alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
+    alias aider4o 'mkdir -p ./.aider && aider --4o --openai-api-key (op read op://private/openai/credential)'
+    alias git_clean 'git branch --merged | grep -Ev "(^\*|^\+|master|main|dev)" | xargs --no-run-if-empty git branch -D'
 
     set -x MOAR "--no-linenumbers --style=tokyonight-storm"
     set -x PAGER "moar"

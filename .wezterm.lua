@@ -7,12 +7,17 @@ local config = {
 	color_scheme = "Tokyo Night Moon",
 	-- color_scheme = "Earthsong",
 
-	window_background_opacity = 0.99,
+	window_background_opacity = 0.95,
+	macos_window_background_blur = 10,
+	inactive_pane_hsb = {
+		saturation = 0.9,
+		brightness = 0.7,
+	},
 	window_padding = {
-		left = 1,
-		right = 1,
-		top = 1,
-		bottom = 1,
+		left = 3,
+		right = 3,
+		top = 3,
+		bottom = 3,
 	},
 	window_frame = {
 		font_size = 12,
@@ -48,7 +53,6 @@ local config = {
 
 -- https://wezfurlong.org/wezterm/config/lua/gui-events/gui-startup.html
 -- Maximize on start
-
 wezterm.on("gui-startup", function(cmd)
 	local _, _, window = mux.spawn_window(cmd or {})
 	window:gui_window():maximize()
@@ -70,6 +74,8 @@ workspace_switcher.workspace_formatter = function(label)
 		{ Text = "󱂬 : " .. label },
 	})
 end
+
+-- wezterm.on("gui-startup", resurrect.resurrect_on_gui_startup)
 
 -- loads the state whenever I create a new workspace
 wezterm.on("smart_workspace_switcher.workspace_switcher.created", function(window, path, label)
