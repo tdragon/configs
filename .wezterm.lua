@@ -13,17 +13,17 @@ local config = {
 		saturation = 0.9,
 		brightness = 0.7,
 	},
-	window_padding = {
-		left = 3,
-		right = 3,
-		top = 3,
-		bottom = 3,
-	},
+	-- window_padding = {
+	-- 	left = 3,
+	-- 	right = 3,
+	-- 	top = 3,
+	-- 	bottom = 3,
+	-- },
 	window_frame = {
 		font_size = 12,
 	},
 	command_palette_font_size = 16,
-	window_decorations = "RESIZE",
+	-- window_decorations = "RESIZE",
 	font = wezterm.font_with_fallback({
 		{ family = "Iosevka Term" },
 		-- { family = "JetBrains Mono", weight = "Medium" },

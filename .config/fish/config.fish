@@ -13,6 +13,8 @@ if status is-interactive
     set -x MOAR "--no-linenumbers --style=tokyonight-storm"
     set -x PAGER "moar"
     fish_add_path ~/Library/Android/sdk/platform-tools/
+
+    fzf_configure_bindings --git_status=\cs --directory=\cf --git_log=\cl
 end
 
 function y
