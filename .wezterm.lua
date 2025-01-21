@@ -22,7 +22,7 @@ local config = {
 	window_frame = {
 		font_size = 12,
 	},
-	command_palette_font_size = 16,
+	command_palette_font_size = 18,
 	-- window_decorations = "RESIZE",
 	font = wezterm.font_with_fallback({
 		{ family = "Iosevka Term" },
@@ -31,12 +31,12 @@ local config = {
 		"Noto Color Emoji",
 	}),
 	freetype_load_flags = "NO_HINTING",
-	freetype_load_target = "Light",
-	freetype_render_target = "HorizontalLcd",
-	font_size = 15,
+	-- freetype_load_target = "Light",
+	-- freetype_render_target = "HorizontalLcd",
+	font_size = 18,
 	front_end = "WebGpu",
-	line_height = 1.0,
-	cell_width = 1.0,
+	line_height = 1.05,
+	cell_width = 1.05,
 
 	hide_tab_bar_if_only_one_tab = false,
 	tab_bar_at_bottom = true,

@@ -10,11 +10,11 @@ if status is-interactive
     alias aider4o 'mkdir -p ./.aider && aider --4o --openai-api-key (op read op://private/openai/credential)'
     alias git_clean 'git branch --merged | grep -Ev "(^\*|^\+|master|main|dev)" | xargs --no-run-if-empty git branch -D'
 
-    set -x MOAR "--no-linenumbers --style=tokyonight-storm"
+    set -x MOAR "--no-linenumbers --style=tokyonight-storm --reformat"
     set -x PAGER "moar"
     fish_add_path ~/Library/Android/sdk/platform-tools/
 
-    fzf_configure_bindings --git_status=\cs --directory=\cf --git_log=\cl
+    fzf_configure_bindings --git_status=\cs --directory=\cf --git_log=\cg
 end
 
 function y
